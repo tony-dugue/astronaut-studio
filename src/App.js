@@ -1,8 +1,18 @@
+import GlobalStyles from './styles/GlobalStyles'
+import { ThemeProvider } from "styled-components";
+import { dark } from "./styles/Theme";
+
 function App() {
   return (
-    <div className="App">
-      App.js
-    </div>
+    <>
+      <GlobalStyles />
+
+      <ThemeProvider theme={dark}>
+        <main className="App">
+          App File
+        </main>
+      </ThemeProvider>
+    </>
   );
 }
 
