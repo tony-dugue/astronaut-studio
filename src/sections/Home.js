@@ -2,20 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import CoverVideo from "../components/CoverVideo";
 import Logo from "../components/Logo";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
-   <Section>
+   <HomeWrapper>
      <CoverVideo />
      <Logo />
-     <h1>NavBar</h1>
-   </Section>
+     <NavBar />
+   </HomeWrapper>
   )
 }
 
 export default Home
 
-const Section = styled.section`
+const HomeWrapper = styled.section`
   position: relative;
   min-height: 200vh;
   overflow: hidden;
