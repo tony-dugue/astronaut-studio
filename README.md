@@ -11,6 +11,8 @@ Ce projet a été initialisé avec [Create React App](https://github.com/faceboo
 ## 📷 Screenshots
 ***
 
+<img src="./screenshots/home.png" width="500">
+
 ## 🚀 Installation
 ***
 
