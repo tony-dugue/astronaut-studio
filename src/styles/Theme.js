@@ -3,8 +3,8 @@
 export const dark =  {
   body: '#202020', // black shade
   text: '#fff',
-  bodyRgba: 'rgba(32, 32, 32)',
-  textRgba: 'rgba(255, 255, 255)',
+  bodyRgba: 'rgba(32, 32, 32, 0.6)',
+  textRgba: 'rgb(255, 255, 255)',
 
   grey: '#bebebe', // grey shade
 

@@ -3,6 +3,8 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import {dark} from "./styles/Theme";
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import 'locomotive-scroll/dist/locomotive-scroll.min.css'
+
 import Home from "./sections/Home";
 
 function App() {
