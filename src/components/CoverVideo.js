@@ -71,6 +71,7 @@ const Title = styled(motion.div)`
     font-weight: 300;
     text-shadow: 1px 1px 1px ${props => props.theme.body};
     text-transform: capitalize;
+    margin-top:-50px;
   }
 `
 
