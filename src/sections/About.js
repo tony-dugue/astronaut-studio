@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import img1 from '../assets/images/about/1.jpg'
+import img2 from '../assets/images/about/2.jpg'
+import img3 from '../assets/images/about/3.jpg'
+
 const About = () => {
   return (
     <AboutWrapper id="fixed-target">
@@ -19,7 +23,11 @@ const About = () => {
         pour découvrir plus précisément nos créations.
       </Left>
 
-      <Right>Images</Right>
+      <Right>
+        <img src={img1} alt="A propos" />
+        <img src={img2} className="small-img-1" alt="A propos" data-scroll data-scroll-speed="5" />
+        <img src={img3} className="small-img-2" alt="A propos" data-scroll data-scroll-speed="-2" />
+      </Right>
 
     </AboutWrapper>
   )
@@ -30,8 +38,7 @@ export default About
 const AboutWrapper = styled.section`
   position: relative;
   width: 80vw;
-  min-height: 200vh;
-  overflow: hidden;
+  min-height: 100vh;
   
   display: flex;
   margin: 0 auto;
@@ -60,5 +67,24 @@ const Left = styled.div`
 
 const Right = styled.div`
   width: 50%;
+  position: relative;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .small-img-1 {
+    width: 40%;
+    position: absolute;
+    right: 87%;
+    bottom: 10%;
+  }
+  .small-img-2 {
+    width: 50%;
+    position: absolute;
+    left: 70%;
+    bottom: 30%;
+  }
 `
 
