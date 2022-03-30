@@ -39,9 +39,9 @@ const AboutWrapper = styled.section`
   position: relative;
   width: 80vw;
   min-height: 100vh;
-  
+
   display: flex;
-  margin: 0 auto;
+  margin: 0 auto 6rem;
 `
 
 const Title = styled.h1`

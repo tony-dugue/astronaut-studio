@@ -33,7 +33,7 @@ const Logo = () => {
           initial="hidden"
           animate="visible"
         >
-          Astronaut Studio
+          Astronaut
         </Text>
 
       </Link>
