@@ -17,8 +17,8 @@ const NavBar = () => {
        <MenuBtn onClick={ () => setClick(!click)}>Menu</MenuBtn>
        <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>Accueil</MenuItem>
        <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>A propos</MenuItem>
-       <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>Acheter</MenuItem>
-       <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>Nouveautés</MenuItem>
+       <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>Shop</MenuItem>
+       <MenuItem whileHover={{ scale: 1.1, y: -5 }} whileTap={{ scale: 0.9, y: 0 }}>Nouvelle Collection</MenuItem>
      </MenuItems>
    </NavContainer>
   )

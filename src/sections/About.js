@@ -12,7 +12,7 @@ const About = () => {
       <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">A Propos</Title>
 
       <Left data-scroll data-scroll-sticky data-scroll-target="#fixed-target">
-        Astronaut Studio est un studio créatif basé à Paris.
+        Astronaut Studio est un studio de mode basé à Paris.<br/>
         Animés par une équipe d'artistes, nous créons des oeuvres futuristes sur le thème de l'espace.
         <br /><br />
         Nous nous efforçons de bâtir sur notre vision. En tant que studio créatif, nous faisons notre maximum pour créer des expériences incroyables accessible à tous.
@@ -49,6 +49,7 @@ const Title = styled.h1`
   color: ${props => props.theme.primary};
   font-family: "Kaushan Script";
   font-weight: 300;
+  text-shadow: 1px 1px 1px ${props => props.theme.body};
   
   position: absolute;
   top: 1rem;
