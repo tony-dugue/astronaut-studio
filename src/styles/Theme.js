@@ -6,7 +6,7 @@ export const dark =  {
   bodyRgba: 'rgba(32, 32, 32, 0.6)',
   primary: '#7C5CAE',
 
-  grey: '#bebebe', // grey shade
+  grey: '#eaeaea', // grey shade
 
   fontxs: 'O.75em',  // 1em = 16px
   fontsm: 'O.875em',
