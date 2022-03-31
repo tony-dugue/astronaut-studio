@@ -3,6 +3,34 @@ import styled from "styled-components";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {motion} from "framer-motion";
+
+import img1 from '../assets/images/shop/1.jpg'
+import img2 from '../assets/images/shop/2.jpg'
+import img3 from '../assets/images/shop/3.jpg'
+import img4 from '../assets/images/shop/4.jpg'
+import img5 from '../assets/images/shop/5.jpg'
+import img6 from '../assets/images/shop/6.jpg'
+import img7 from '../assets/images/shop/7.jpg'
+import img8 from '../assets/images/shop/8.jpg'
+import img9 from '../assets/images/shop/9.jpg'
+import img10 from '../assets/images/shop/10.jpg'
+import img11 from '../assets/images/shop/11.jpg'
+import img12 from '../assets/images/shop/12.jpg'
+
+const Product = ({ img, title = '' }) => {
+  return (
+    <Item
+      initial={{ filter: 'grayscale(100%)' }}
+      whileInView={{ filter: 'grayscale(0%)' }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: false, amount: 'all' }}
+    >
+      <img src={img} alt={title}/>
+      <h1>{title}</h1>
+    </Item>
+  )
+}
 
 const Shop = () => {
 
@@ -69,20 +97,18 @@ const Shop = () => {
      </Left>
 
      <Right ref={horizontalRef}>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
-       <h1>img</h1>
+       <Product img={img1} title="En stock" />
+       <Product img={img2} title="Automne 2022" />
+       <Product img={img3} title="En stock" />
+       <Product img={img4} title="En stock" />
+       <Product img={img5} title="En stock" />
+       <Product img={img6} title="Eté 2022" />
+       <Product img={img7} title="Automne 2022" />
+       <Product img={img8} title="Automne 2022" />
+       <Product img={img9} title="3 tailles disponibles" />
+       <Product img={img10} title="En stock" />
+       <Product img={img11} title="En stock" />
+       <Product img={img12} title="Edition spéciale" />
      </Right>
 
    </ShopWrapper>
@@ -156,6 +182,30 @@ const Right = styled.div`
   h1 {
     width: 5rem;
     margin: 0 2rem;
+  }
+`
+
+const Item = styled(motion.div)`
+  width: 20rem;
+  margin-right: 6rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  h1 {
+    display: inline-block;
+    width: fit-content;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
   }
 `
 
