@@ -49,7 +49,7 @@ const Container = styled.div`
   left: 1rem;
 
   width: 100%;
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.grey};
   z-index: 5;
   
   a {
@@ -66,7 +66,7 @@ const Container = styled.div`
 
     g {
       path {
-          stroke: ${props => props.theme.primary};
+          stroke: ${props => props.theme.grey};
       }
     }
   }
@@ -74,6 +74,6 @@ const Container = styled.div`
 
 const Text = styled(motion.span)`
   font-size: ${props => props.theme.fontmd}; 
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.grey};
   padding-bottom: 0.5rem;
 `

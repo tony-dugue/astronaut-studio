@@ -57,7 +57,7 @@ const Shop = () => {
           scroller: '.App', // locomotive element
           scrub: true,
           pin: true,
-          markers: true
+          //markers: true
         },
         // on doit augmenter la hauteur de défilement de cette section comme pour la largeur de l'élément scrollé
         height: `${scrollingElement.scrollWidth}px`,
@@ -72,7 +72,7 @@ const Shop = () => {
           end: pinWrapWidth,
           scroller: '.App', // locomotive element
           scrub: true,
-          markers: true
+          //markers: true
         },
         x: -pinWrapWidth,
         ease: 'none,'
@@ -80,6 +80,11 @@ const Shop = () => {
       ScrollTrigger.refresh();
     }, 1000)
 
+    return () => {
+      // Let's clear instances
+      tl.kill();
+      ScrollTrigger.kill();
+    }
   }, []);
 
   return (
@@ -139,7 +144,7 @@ const Title = styled.h1`
   text-shadow: 1px 1px 1px ${props => props.theme.grey};
 
   position: absolute;
-  top: 2rem;
+  top: 0;
   left: 5%;
   z-index: 11;
 `

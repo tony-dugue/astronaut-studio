@@ -11,6 +11,7 @@ import Home from "./sections/Home";
 import About from "./sections/About";
 import Shop from "./sections/Shop";
 import Banner from "./sections/Banner";
+import NewArrival from "./sections/NewArrival";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
             <About />
             <Shop />
             <Banner />
+            <NewArrival />
           </main>
         </AnimatePresence>
         </LocomotiveScrollProvider>
