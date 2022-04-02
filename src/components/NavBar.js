@@ -42,7 +42,7 @@ const NavContainer = styled(motion.div)`
 const MenuItems = styled(motion.ul)`
   position: relative;
   height: ${props => props.theme.navHeight};
-  background-color: ${props => props.theme.body};
+  background-color: ${props => props.theme.text};
   color: ${props => props.theme.text};
   list-style: none;
   
@@ -57,7 +57,7 @@ const MenuItems = styled(motion.ul)`
 const MenuBtn = styled.li`
   background-color: ${props => props.theme.grey};
   list-style: none;
-  color: ${props => props.theme.body};
+  color: ${props => props.theme.text};
   width: 15rem;
   height: 2.5rem;
 
@@ -81,6 +81,6 @@ const MenuBtn = styled.li`
 
 const MenuItem = styled(motion.li)`
   test-transform: uppercase;
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.white};
 
 `

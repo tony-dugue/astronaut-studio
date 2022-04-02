@@ -52,7 +52,7 @@ const Title = styled(motion.div)`
   justify-content: center;
   align-items: center;
 
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.primary};
   
   div {
     display: flex;
@@ -62,14 +62,14 @@ const Title = styled(motion.div)`
   h1 {
     font-family: 'Kaushan Script';
     font-size: ${props => props.theme.fontBig};
-    text-shadow: 1px 1px 1px ${props => props.theme.body};
+    text-shadow: 1px 1px 1px ${props => props.theme.text};
   }
 
   h2 {
     font-family: 'Kaushan Script';
     font-size: ${props => props.theme.fontxxl};
     font-weight: 300;
-    text-shadow: 1px 1px 1px ${props => props.theme.body};
+    text-shadow: 1px 1px 1px ${props => props.theme.primary};
     text-transform: capitalize;
     margin-top:-50px;
   }

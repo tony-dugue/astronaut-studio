@@ -133,10 +133,10 @@ const ShopWrapper = styled.section`
 
 const Title = styled.h1`
   font-size: ${props => props.theme.fontxxxl};
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.text};
   font-family: "Kaushan Script";
   font-weight: 300;
-  text-shadow: 1px 1px 1px ${props => props.theme.body};
+  text-shadow: 1px 1px 1px ${props => props.theme.grey};
 
   position: absolute;
   top: 2rem;
@@ -146,7 +146,7 @@ const Title = styled.h1`
 
 const Left = styled.div`
   width: 35%;
-  background-color: ${props => props.theme.body};
+  background-color: ${props => props.theme.primary};
   color: ${props => props.theme.text};
   
   min-height: 100vh;
@@ -208,5 +208,3 @@ const Item = styled(motion.div)`
     cursor: pointer;
   }
 `
-
-// «N’aie pas peur de l’espace qui distance tes rêves de la réalité. Si tu peux en rêver, tu peux le réaliser»

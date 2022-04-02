@@ -5,11 +5,12 @@ import {dark} from "./styles/Theme";
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.min.css'
 import {AnimatePresence} from "framer-motion";
+import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Shop from "./sections/Shop";
-import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
+import Banner from "./sections/Banner";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
             <Home />
             <About />
             <Shop />
+            <Banner />
           </main>
         </AnimatePresence>
         </LocomotiveScrollProvider>

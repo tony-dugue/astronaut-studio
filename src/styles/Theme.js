@@ -1,10 +1,10 @@
 
 // Add themes as per your requirements
 export const dark =  {
-  body: '#202020', // black shade
-  text: '#fff',
+  primary: '#f7df18',
+  text: '#000026',
   bodyRgba: 'rgba(32, 32, 32, 0.6)',
-  primary: '#7C5CAE',
+  white: '#fff',
 
   grey: '#eaeaea', // grey shade
 

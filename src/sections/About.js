@@ -46,10 +46,10 @@ const AboutWrapper = styled.section`
 
 const Title = styled.h1`
   font-size: ${props => props.theme.fontBig};
-  color: ${props => props.theme.primary};
+  color: ${props => props.theme.text};
   font-family: "Kaushan Script";
   font-weight: 300;
-  text-shadow: 1px 1px 1px ${props => props.theme.body};
+  text-shadow: 1px 1px 1px ${props => props.theme.grey};
   
   position: absolute;
   top: 1rem;
