@@ -7,6 +7,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.min.css'
 import {AnimatePresence} from "framer-motion";
 import ScrollTriggerProxy from "./components/ScrollTriggerProxy";
 
+import Loader from "./components/Loader";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Shop from "./sections/Shop";
@@ -41,18 +42,20 @@ function App() {
           containerRef={containerRef}
         >
 
-        <ScrollTriggerProxy />
+          <Loader />
 
-        <AnimatePresence>
-          <main className="App" data-scroll-container ref={containerRef}>
-            <Home />
-            <About />
-            <Shop />
-            <Banner />
-            <NewArrival />
-            <Footer />
-          </main>
-        </AnimatePresence>
+          <ScrollTriggerProxy />
+
+          <AnimatePresence>
+            <main className="App" data-scroll-container ref={containerRef}>
+              <Home />
+              <About />
+              <Shop />
+              <Banner />
+              <NewArrival />
+              <Footer />
+            </main>
+          </AnimatePresence>
         </LocomotiveScrollProvider>
 
       </ThemeProvider>
