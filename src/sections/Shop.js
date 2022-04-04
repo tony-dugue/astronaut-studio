@@ -88,7 +88,7 @@ const Shop = () => {
   }, []);
 
   return (
-   <ShopWrapper ref={ref}>
+   <ShopWrapper ref={ref} id="shop">
 
      <Title data-scroll data-scroll-speed="-1">Nouvelle collection</Title>
 

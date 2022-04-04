@@ -7,7 +7,7 @@ import img3 from '../assets/images/about/3.jpg'
 
 const About = () => {
   return (
-    <AboutWrapper id="fixed-target">
+    <AboutWrapper id="fixed-target" className="about">
 
       <Title data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal">A Propos</Title>
 

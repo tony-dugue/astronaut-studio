@@ -1,29 +1,50 @@
 import React from 'react'
 import styled from "styled-components";
 
+import {motion} from "framer-motion";
+import {useLocomotiveScroll} from "react-locomotive-scroll";
+
 import Logo from '../assets/svgs/star_white_48dp.svg'
 
 const Footer = () => {
+
+  const { scroll } = useLocomotiveScroll()
+
+  const handleScroll = id => {
+    let element = document.querySelector(id)
+
+    scroll.scrollTo(element, {  offset: -100, duration: 2000, easing: [0.25, 0.0, 0.35, 1.0] })
+  }
+
   return (
    <FooterWrapper>
 
      <LogoContainer>
-       <img src={Logo} alt="Astronaut Studio" />
-       <h3>Astronaut</h3>
+       <img data-scroll data-scroll-speed="2" src={Logo} alt="Astronaut Studio" />
+       <h3 data-scroll data-scroll-speed="-1">Astronaut</h3>
      </LogoContainer>
 
-     <FooterComponent>
+     <FooterComponent
+      initial={{ y: '-400px' }}
+      whileInView={{ y: 0 }}
+      viewport={{ once:false }}
+      transition={{ duration: 1.5}}
+     >
        <ul>
-         <li>Accueil</li>
-         <li>A propos</li>
-         <li>Shop</li>
-         <li>Nouvelle Collection</li>
+         <li onClick={ () => handleScroll('#home')}>Accueil</li>
+         <li onClick={ () => handleScroll('.about')}>A propos</li>
+         <li onClick={ () => handleScroll('#shop')}>Shop</li>
+         <li onClick={ () => handleScroll('#new-arrival')}>Nouvelle Collection</li>
          <li><a href="https://google.com/" target="_blank" rel="noreferrer">Lookbook</a></li>
          <li><a href="https://google.com/" target="_blank" rel="noreferrer">Commentaires</a></li>
        </ul>
+
        <Bottom>
-         <span>&copy; {new Date().getFullYear()}. Tous droits réservés</span>
+         <span data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
+           &copy; {new Date().getFullYear()}. Tous droits réservés
+         </span>
        </Bottom>
+
      </FooterComponent>
 
    </FooterWrapper>
@@ -63,7 +84,7 @@ const LogoContainer = styled.div`
   }
 `
 
-const FooterComponent = styled.footer`
+const FooterComponent = styled(motion.footer)`
   width: 80vw;
 
   ul {

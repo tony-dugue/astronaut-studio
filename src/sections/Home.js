@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
-   <HomeWrapper>
+   <HomeWrapper id="home">
      <CoverVideo />
      <Logo />
      <NavBar />
