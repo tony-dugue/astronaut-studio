@@ -14,7 +14,11 @@ const textVariants = {
 
 const Loader = () => {
   return (
-   <LoaderWrapper>
+   <LoaderWrapper
+      initial={{ y: 0, opacity: 1 }}
+      exit={{ y: '100%', opacity: 0 }}
+      transition={{ duration: 2}}
+   >
      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="48px" viewBox="0 0 24 24" width="48px" fill="none">
        <g>
          <motion.path
@@ -39,7 +43,7 @@ const Loader = () => {
 
 export default Loader
 
-const LoaderWrapper = styled.div`
+const LoaderWrapper = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;

@@ -1,4 +1,4 @@
-import {useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import GlobalStyles from "./styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import {dark} from "./styles/Theme";
@@ -18,6 +18,14 @@ import Footer from "./sections/Footer";
 function App() {
 
   const containerRef = useRef(null)
+
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true)
+    }, 3000)
+  }, [])
 
   return (
     <>
@@ -42,7 +50,9 @@ function App() {
           containerRef={containerRef}
         >
 
-          <Loader />
+          <AnimatePresence>
+            { loaded ? null : <Loader />}
+          </AnimatePresence>
 
           <ScrollTriggerProxy />
 

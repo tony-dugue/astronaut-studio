@@ -6,7 +6,7 @@ import MainVideo from '../assets/videos/video3.mp4'
 
 const containerVariants = {
   hidden : { opacity: 0 },
-  show : { opacity: 1, transition : { delayChildren: 2, staggerChildren: 0.3 } }
+  show : { opacity: 1, transition : { delayChildren: 5, staggerChildren: 0.3 } }
 }
 
 const letterVariants = {
