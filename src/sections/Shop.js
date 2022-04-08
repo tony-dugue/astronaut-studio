@@ -97,8 +97,8 @@ const Shop = () => {
          <br /><br />
        Nos produits sont crées avec des matières de haute qualité, du coton le plus fin aux tissus les plus écologiques.
       <br /><br />
-       Nous proposons une grande gamme d'options vestimentaires différentes comme des chaussures, des vestes et des pantalons.
-       Non seulement des vêtements, mais nous créons également des accessoires uniques, originaux et surtout ... futuristes !</p>
+       Nous proposons une grande gamme d'options vestimentaires comme des chaussures, des vestes et des pantalons,
+       mais nous créons également des accessoires uniques, originaux et surtout ... futuristes !</p>
      </Left>
 
      <Right ref={horizontalRef}>
@@ -147,6 +147,15 @@ const Title = styled.h1`
   top: 0;
   left: 5%;
   z-index: 11;
+
+  @media (max-width: 64em) {
+    font-size: ${props => props.theme.fontxxl};
+  }
+
+  @media (max-width: 48em) {
+    font-size: ${props => props.theme.fontxl};
+    top: -20px;
+  }
 `
 
 const Left = styled.div`
@@ -168,6 +177,23 @@ const Left = styled.div`
     font-weight: 300;
     width: 80%;
     margin: 0 auto;
+  }
+
+  @media (max-width: 64em) {
+    p {
+      font-size: ${props => props.theme.fontmd};
+    }
+  }
+  @media (max-width: 48em) {
+    width: 40%;
+    p {
+      font-size: ${props => props.theme.fontsm};
+    }
+  }
+  @media (max-width: 30em) {
+    p {
+      font-size: ${props => props.theme.fontxs};
+    }
   }
 `
 
@@ -211,5 +237,9 @@ const Item = styled(motion.div)`
     font-weight: 500;
     text-align: center;
     cursor: pointer;
+  }
+
+  @media (max-width: 48em) {
+    width: 12rem;
   }
 `

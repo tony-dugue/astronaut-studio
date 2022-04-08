@@ -54,7 +54,7 @@ const Footer = () => {
 export default Footer
 
 const FooterWrapper = styled.section`
-  min-height: 100vh;
+  min-height: 100vh; 
   width: 100vw;
   margin: 5rem auto;
   
@@ -65,6 +65,10 @@ const FooterWrapper = styled.section`
   
   background-color: ${props => props.theme.text};
   color: ${props => props.theme.white};
+
+  @media (max-width: 48em) {
+    margin: 0 auto;
+  }
 `
 
 const LogoContainer = styled.div`
@@ -81,11 +85,19 @@ const LogoContainer = styled.div`
   h3 {
     font-size: ${props => props.theme.fontxl};
     font-family: 'Kaushan Script';
+
+    @media (max-width: 48em) {
+      font-size: ${props => props.theme.fontxl};
+    }
   }
 `
 
 const FooterComponent = styled(motion.footer)`
   width: 80vw;
+
+  @media (max-width: 48em) {
+    width: 90vw;
+  }
 
   ul {
     list-style: none;
@@ -97,6 +109,10 @@ const FooterComponent = styled(motion.footer)`
     padding: 0 1rem;
     border-top: 1px solid ${props => props.theme.grey};
     border-bottom: 1px solid ${props => props.theme.grey};
+
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
   }
   
   li {
@@ -109,6 +125,11 @@ const FooterComponent = styled(motion.footer)`
     &:hover {
       transform: scale(1.1);
     }
+
+    @media (max-width: 48em) {
+      padding: 1rem;
+      font-size: ${props => props.theme.fontmd};
+    }
   }
 `
 
@@ -119,4 +140,18 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 64em) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    
+    span {
+      transform: none !important;
+    }
+  }
+  @media (max-width: 48em) {
+    font-size: ${props => props.theme.fontmd};
+  }
 `

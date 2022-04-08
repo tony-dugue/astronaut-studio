@@ -112,7 +112,7 @@ const NewArrivalWrapper = styled.section`
   
   position: relative;
   
-  //background-color: ${props => props.theme.primary};
+
 `
 
 const Overlay = styled.div`
@@ -122,11 +122,26 @@ const Overlay = styled.div`
   transform: translate(-50%, -50%);
   width: 30vw;
   height: 90vh;
-
-  //background-color: ${props => props.theme.grey};
+  
   box-shadow: 0 0 0 4vw ${props => props.theme.white};
   border: 3px solid ${props => props.theme.grey};
   z-index: 11;
+
+  @media (max-width: 70em) {
+    width: 40vw;
+    height: 80vh;
+  }
+  @media (max-width: 64em) {
+    width: 50vw;
+    box-shadow: 0 0 0 60vw ${props => props.theme.white};
+  }
+  @media (max-width: 48em) {
+    width: 60vw;
+  }
+  @media (max-width: 30em) {
+    width: 80vw;
+    height: 60vh;
+  }
 `
 
 const Title = styled.h1`
@@ -140,6 +155,15 @@ const Title = styled.h1`
   top: 2rem;
   left: 0;
   z-index: 11;
+
+  @media (max-width: 64em) {
+    width: 50vw;
+    box-shadow: 0 0 0 6vw ${props => props.theme.white};
+  }
+  @media (max-width: 48em) {
+    font-size: ${props => props.theme.fontxxl};
+    width: 60vw;
+  }
 `
 
 const Text = styled.div`
@@ -151,6 +175,10 @@ const Text = styled.div`
   top: 0;
   right: 0;
   z-index: 11;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
 `
 
 const Container = styled.div`
@@ -165,6 +193,16 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 64em) {
+    width: 30vw;
+  }
+  @media (max-width: 48em) {
+    width: 40vw;
+  }
+  @media (max-width: 30em) {
+    width: 60vw;
+  }
 `
 
 const Item = styled.div`

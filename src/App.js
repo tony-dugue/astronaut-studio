@@ -37,6 +37,8 @@ function App() {
           options={
             {
               smooth: true,
+              smartphone: { smooth: true},  // enable smooth scrolling on mobile
+              tablet: { smooth: true},  // enable smooth scrolling on tablet
               // ... all available Locomotive Scroll instance options
             }
           }

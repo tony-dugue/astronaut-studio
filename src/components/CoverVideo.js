@@ -39,6 +39,26 @@ const CoverVideo = () => {
 
 export default CoverVideo
 
+const VideoContainer = styled.section`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  
+  video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    
+    @media (max-width: 48em) {
+      object-position: center 10%;
+    }
+  }
+
+  @media (max-width: 30em) {
+    object-position: center 50%;
+  }
+`
+
 const Title = styled(motion.div)`
   position: absolute;
   top: 0;
@@ -63,6 +83,10 @@ const Title = styled(motion.div)`
     font-family: 'Kaushan Script';
     font-size: ${props => props.theme.fontBig};
     text-shadow: 1px 1px 1px ${props => props.theme.text};
+
+    @media (max-width: 30em) {
+      font-size: calc(3rem + 6vw);
+    }
   }
 
   h2 {
@@ -72,18 +96,11 @@ const Title = styled(motion.div)`
     text-shadow: 1px 1px 1px ${props => props.theme.primary};
     text-transform: capitalize;
     margin-top:-50px;
-  }
-`
 
-const VideoContainer = styled.section`
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  
-  video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    @media (max-width: 30em) {
+      font-size: ${props => props.theme.fontxl};
+      margin-top: 0;
+    }
   }
 `
 
