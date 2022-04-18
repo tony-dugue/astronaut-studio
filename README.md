@@ -12,6 +12,20 @@ Ce projet a été initialisé avec [Create React App](https://github.com/faceboo
 ***
 
 <img src="./screenshots/home.png" width="500">
+<img src="./screenshots/a-propos.png" width="500">
+<img src="./screenshots/nouvelle-collection.png" width="500">
+<img src="./screenshots/nouveautes.png" width="500">
+
+<table>
+  <tr>
+    <td><img src="./screenshots/mobile-home.png" width="300"></td>
+    <td><img src="./screenshots/mobile-navbar.png" width="300"></td>
+  <tr>
+  <tr>
+    <td><img src="./screenshots/mobile-a-propos.png" width="300"></td>
+    <td><img src="./screenshots/mobile-footer.png" width="300"></td>
+  <tr>
+</table>
 
 ## 🚀 Installation
 ***
